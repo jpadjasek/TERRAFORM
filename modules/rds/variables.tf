@@ -15,41 +15,10 @@ variable "tags" {
   default     = {}
 }
 
-variable "cidr_vpc" {
-  description = "CIDR block for the VPC"
-  default = "10.1.0.0/16"
-}
-
-variable "cidr_subnet" {
-  description = "CIDR block for the subnet"
-  default = "10.1.1.0/24"
-}
-
-variable "cidr_subnet_2" {
-  description = "CIDR block for the subnet"
-  default = "10.1.2.0/24"
-}
-
-variable "availability_zone_1" {
-  description = "availability zone to create subnet"
-  default = "eu-west-2a"
-}
-
-variable "availability_zone_2" {
-  description = "availability zone to create subnet"
-  default = "eu-west-2b"
-}
-
 variable "db_name" {
   description = "Db name"
   type        = string
   default     = "jpadjasekTerraformRDS"
-}
-
-variable "db_replica_name" {
-  description = "Db name"
-  type        = string
-  default     = "jpadjasekTerraformRDSReplica"
 }
 
 variable "user_name" {
