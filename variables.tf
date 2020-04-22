@@ -7,5 +7,5 @@ variable "project_name" {
 variable "stage" {
   description = "Name of stage for current environment"
   type        = string
-  default     = "dev1"
+  default     = "dev"
 }

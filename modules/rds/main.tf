@@ -12,7 +12,7 @@ resource "aws_db_instance" "master" {
   storage_type         = "gp2"
   engine               = "mysql"
   availability_zone    = "eu-west-2a"
-  engine_version       = "5.7"
+  engine_version       = "5.7.22"
   instance_class       = "db.t2.micro"
   name                 = var.db_name
   username             = var.user_name
@@ -34,7 +34,7 @@ resource "aws_db_instance" "replica" {
   availability_zone    = "eu-west-2b"
   storage_type         = "gp2"
   engine               = "mysql"
-  engine_version       = "5.7"
+  engine_version       = "5.7.22"
   instance_class       = "db.t2.micro"
   name                 = local.db_replica_name
   username             = var.user_name

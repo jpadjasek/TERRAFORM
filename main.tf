@@ -19,6 +19,15 @@ module "all" {
   cidr_subnet_2  = "10.2.2.0/24"
 }
 
+module "ec2" {
+  source                  = "./modules/ec2"
+  project_name            = var.project_name
+  stage                   = var.stage
+  security_group_id       = module.all.security_group_id
+  subnet_id_1             = module.all.subnet_id_1
+  subnet_id_2             = module.all.subnet_id_2
+}
+
 module "rds" {
   source               = "./modules/rds"
   project_name         = var.project_name
