@@ -39,27 +39,3 @@ variable "availability_zone_2" {
   description = "availability zone to create subnet"
   default = "eu-west-2b"
 }
-
-variable "db_name" {
-  description = "Db name"
-  type        = string
-  default     = "jpadjasekTerraformRDS"
-}
-
-variable "db_replica_name" {
-  description = "Db name"
-  type        = string
-  default     = "jpadjasekTerraformRDSReplica"
-}
-
-variable "user_name" {
-  description = "User name for db"
-  type        = string
-  default     = "admin"
-}
-
-variable "user_password" {
-  description = "User password for db"
-  type        = string
-  default     = "Test12345!"
-}
